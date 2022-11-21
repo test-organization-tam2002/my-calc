@@ -7,7 +7,7 @@ RUN apt-get update -y
 RUN apt-get install -y python-setuptools git telnet curl
 
 # Install pip
-RUN easy_install pip
+RUN apt-get install python3-pip
 
 # Bundle app source
 ADD . /src
