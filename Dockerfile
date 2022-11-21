@@ -7,7 +7,8 @@ RUN apt-get update -y
 RUN apt-get install -y python-setuptools git telnet curl
 
 # Install pip
-RUN apt-get install python3-pip
+RUN curl -LO https://bootstrap.pypa.io/get-pip.py
+RUN python3 get-pip.py
 
 # Bundle app source
 ADD . /src
